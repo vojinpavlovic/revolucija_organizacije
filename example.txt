@@ -1,0 +1,80 @@
+
+-----------
+-[ENGLISH]-
+-----------
+
+******************************************************************
+            EXAMPLE HOW TO CONFIGURE AN ORGANISATION
+******************************************************************
+Config.Org.list['mafia-name'] = {
+    cars = {                                                        -- (NOT REQUIRED) if this option is not added it will notify that there is no cars
+        vehicle_limit = 3,                                          -- (NOT REQUIRED) if this option is not added default limit is 3 
+        list = {                                                    -- (NOT REQUIRED) if this option is not added it will notify that there is no cars
+            [1] = {                                                 -- (REQUIRED) adding car is must by it's index {[1] = {}, [2] = {}, [3] = {},
+                label = 'Sultan',                                   -- (REQUIRED) setting label how it will display client in menu
+                value = 'sultan',                                   -- (REQUIRED) setting model name so client knows which model to spawn
+                upgrades = {                                        -- (NOT REQUIRED) if this option is not added it will spawn default car
+                    ['all'] = {                                     -- (NOT REQUIRED) if this option is not added and grade is not found then it will car with ['all'] props
+                        color = {primary = 42, secondary = 1}      
+                    },
+                    ['boss'] = {                                    -- (NOT REQUIRED) you can set props to car by client job and his grade_name
+                        fullTune = true,                            -- (NOT REQUIRED) this option can be deleted or set to false if you dont want it enabled otherwise true
+                        bulletProof = true,                         -- (NOT REQUIRED) this option can be deleted or set to false if you dont want it enabled otherwise true
+                        windowTint = true,                          -- (NOT REQUIRED) this option can be deleted or set to false if you dont want it enabled otherwise true
+                        color = {primary = 10, secondary = 1},      -- (NOT REQUIRED) this option can be deleted to disable or setting primary and secondary color
+                        plate = 'ABCDEFGH',                         -- (NOT REQUIRED) this option can be deleted or setting plate string of maximum 8 characters
+                    }
+                },
+                access = {boss = true, savetnik = true}             -- (NOT REQUIRED) this option can be deleted or set to false if you dont want it enabled otherwise true {grade_name = boolean}
+            },
+            [2] = {label = 'Infernus', value = 'infernus'}          -- This is example if we only add required options
+        }
+    },
+    coords = {                                                      -- (NOT REQUIRED) if this option is not added then that organisation will not have any markers
+        panel = vector3(0,0,0),                                     -- (NOT REQUIRED) if this option is not added then that marker will not show
+        safe = vector3(0,0,0),                                      -- (NOT REQUIRED) if this option is not added then that marker will not show
+        vehicle_spawn =  vector3(0,0,0),                            -- (NOT REQUIRED) if this option is not added then that marker will not show
+        vehicle_delete = vector3(0,0,0),                            -- (NOT REQUIRED) if this option is not added then that marker will not show but keep in mind if vehicle_spawn is added this is a must
+    }
+}
+
+
+
+----------
+-[SRPSKI]-
+----------
+
+******************************************************************
+           PRIMER KAKO DA KONFIGURISEMO ORGANIZACIJU
+******************************************************************
+Config.Org.list['ime-mafije'] = {
+    cars = {                                                        -- (NIJE POTREBNO) ako ova opcija nije dodata obavestice vas da nemata auta u organizaciji
+        vehicle_limit = 3,                                          -- (NIJE POTREBNO) ako ova opcija nije dodata onda je pocetna vrednost 3
+        list = {                                                    -- (NIJE POTREBNO) ako ova opcija nije dodata obavestice vas da nemata auta u organizaciji
+            [1] = {                                                 -- (POTREBNO) dodavanje auta vrsimo putem indexa, {[1] = {}, [2] = {}, [3] = {}}
+                label = 'Sultan',                                   -- (POTREBNO) oznacavamo auto kako ce da se prikazuje klijentu
+                value = 'sultan',                                   -- (POTREBNO) postavljamo ime modela tako da klijent zna koji model da stvori
+                upgrades = {                                        -- (NIJE POTREBNO) ako ova opcija nije dodata onda ce da stvori obican auto
+                    ['all'] = {                                     -- (NIJE POTREBNO) ako ova opcija nije dodata i stepen nije nadjen onda ce da stvori auto sa ['all'] propovima
+                        color = {primary = 42, secondary = 1}      
+                    },
+                    ['boss'] = {                                    -- (NIJE POTREBNO) mozete dodati postavke autu na osnovu stepen u klijentovom poslu
+                        fullTune = true,                            -- (NIJE POTREBNO) ova opcija moze biti izbrisana ili postavljena na true/false ako zelite da bude ukljuceno/iskljuceno
+                        bulletProof = true,                         -- (NIJE POTREBNO) ova opcija moze biti izbrisana ili postavljena na true/false ako zelite da bude ukljuceno/iskljuceno
+                        windowTint = true,                          -- (NIJE POTREBNO) ova opcija moze biti izbrisana ili postavljena na true/false ako zelite da bude ukljuceno/iskljuceno
+                        color = {primary = 10, secondary = 1},      -- (NIJE POTREBNO) ova opcija moze biti izbrisana ili podesena sa postavkama primary i secondary bojama
+                        plate = 'ABCDEFGH',                         -- (NIJE POTREBNO) ova opcija moze biti izbrisana ili podesena sa string-om od maksimalno 8 karaktera
+                    }
+                },
+                access = {boss = true, savetnik = true}             -- (NIJE POTREBNO) ova opcija moze biti izbrisana ili podesena sa {grade_name1 = true/false, grade_name2 = true/false}
+            },
+            [2] = {label = 'Infernus', value = 'infernus'}          -- Primer kad stavimo samo potrebne opcije
+        }
+    },
+    coords = {                                                      -- (NIJE POTREBNO) ako ova opcija nije dodata onda organizacija nema nikakve markere
+        panel = vector3(0,0,0),                                     -- (NIJE POTREBNO) ako ova opcija nije dodata onda marker se nece pokazivati
+        safe = vector3(0,0,0),                                      -- (NIJE POTREBNO) ako ova opcija nije dodata onda marker se nece pokazivati
+        vehicle_spawn =  vector3(0,0,0),                            -- (NIJE POTREBNO) ako ova opcija nije dodata onda marker se nece pokazivati
+        vehicle_delete = vector3(0,0,0),                            -- (NIJE POTREBNO) ako ova opcija nije dodata onda marker se nece pokazivati ali imajte u vidu ako imate vehicle_spawn onda ova opcija je potrebna
+    }
+}

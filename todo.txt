@@ -1,0 +1,17 @@
+1 - Input
+1.1 Dodati "Da li ste sigurni"
+2.1 Dodati animaciju za izlazenje
+
+2 - Obavestenja:
+2.1 Dodati da li je poruka editovana
+2.2 Dodati u server strani proveru za limit poruka
+2.3 Dodati limit poruka u config-u
+
+3 - Teritorije
+3.1 Popraviti da tacno u vreme pokazuje napad/odbrana je u toku
+3.2 Napraviti da organizacije koje imaju teritorije otkljucane
+
+X - Globalno
+X.1 Ocistiti kod
+
+
